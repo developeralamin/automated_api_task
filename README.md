@@ -20,6 +20,11 @@
 ```bash
 git clone https://github.com/developeralamin/automated_api_task
 ```
+📦 Requirements
+```bash
+    "php": "^8.1",
+     "laravel" : '^10.10'
+```
 
 - Step:2 Install dependencies 
 ```bash
@@ -80,14 +85,8 @@ Step 9: Default queue connection is database send mail with notification
   QUEUE_CONNECTION=database
 ```
 
-📦 Requirements
-```bash
-    "php": "^8.1",
-     "laravel" : '^10.10'
-```
 
 -
-Access the Application
 
 
 
