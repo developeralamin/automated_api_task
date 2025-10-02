@@ -13,6 +13,42 @@
 
 ---
 
+---
+
+## 🚀 Features
+
+-   **Authentication** with registration and login
+-   Customer can **cart products** and **Place the Order**
+-   Customer has **mock payment** (success)
+-   Admin can **accept the user order** and update the status
+-   **Queue worker support** for sending mail after Order Confirmation & Order Place
+
+---
+
+## 💻 API Endpoints (Postman Collection)
+
+To easily test all the backend functionalities, you can import the provided Postman Collection.
+
+### 📥 Import Steps
+
+1.  **Download Postman** if you don't have it installed.
+2.  **Download the Collection File** from the root of this repository:
+    * `Automate.postman_collection.json`
+3.  **Import the Collection:**
+    * In Postman, click **File -> Import** and select the downloaded `Automate.postman_collection.json` file.
+4.  **Set the Base URL:**
+    * The collection is configured to use an environment variable called `{{url}}`. Ensure your Postman environment's `url` variable is set to your local server address: `http://127.0.0.1:8000/api/v1`
+
+### 🔑 Authentication Flow
+
+All authenticated endpoints require an **Authorization Header** with a **Bearer Token**.
+
+1.  Run the **`POST /login`** request.
+2.  The response token is automatically saved to the Postman environment variable `{{token}}`.
+3.  All subsequent requests will use `Bearer {{token}}` for authorization.
+
+---
+
 ## ⚙️ How to Set Up Locally
 
 ### Step 1: Clone the repository
