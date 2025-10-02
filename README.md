@@ -5,24 +5,32 @@
 
 ## 🚀 Features
 
-- Authentication with registration and login
-- Customer can cart products and Place the Order
-- Customer have mock payment (success)
-- Admin accept the user order and update  the status 
-- Queue worker support for send mail after OrderConfirmation & OrderPlace
+## Authentication
+Separate flows for Customer and Admin
 
----
+## Customer
+    Add products to Cart
+    Place Order
+    Mock Payment
+## Admin
+    Manage Categories & Products
+    Accept & update order status
+## Mail Queue Support
+Email sent after order confirmation & order placed
 
----
+## 🔑 Authentication Flow
 
-## 🚀 Features
+## Customer Flow:
+    -- Register / Login
+    -- Add products → Cart
+    -- Place Order  → Mock Payment
+    -- Confirmation Mail (via Queue)
 
--   **Authentication** with registration and login
--   Customer can **cart products** and **Place the Order**
--   Customer has **mock payment** (success)
--   Admin can **accept the user order** and update the status
--   **Queue worker support** for sending mail after Order Confirmation & Order Place
-
+## Admin Flow:
+    -- Login
+    -- View All Orders
+    -- Update Order Status
+    -- Trigger Mail Notification
 ---
 
 ## 💻 API Endpoints (Postman Collection)
