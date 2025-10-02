@@ -115,12 +115,7 @@ Inside that inbox, click on SMTP Settings.
 Copy these values: HOST, PORT, USERNAME, PASSWORD.
 
 3. Update .env File
-4. Clear and Cache Config
 
-```bash
-php artisan config:clear
-php artisan cache:clear
-```
 ```bash
     MAIL_MAILER=smtp
     MAIL_HOST=smtp.mailtrap.io
@@ -131,6 +126,13 @@ php artisan cache:clear
     MAIL_FROM_ADDRESS="hello@example.com"
     MAIL_FROM_NAME="${APP_NAME}"
 ```
+4. Clear and Cache Config
+
+```bash
+php artisan config:clear
+php artisan cache:clear
+```
+
 
 - Step:8 Run the application In a separate terminal:
 ```bash
