@@ -16,7 +16,7 @@ return new class extends Migration
             $table->foreignId('category_id')->references('id')->on('categories')->onDelete('cascade');
             $table->string('name');
             $table->text('description')->nullable();
-            $table->decimal('price', 10, 2);
+            $table->double('price');
             $table->integer('stock')->default(0);
             $table->timestamps();
         });

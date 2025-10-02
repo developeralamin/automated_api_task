@@ -9,7 +9,7 @@ use App\Http\Requests\CategoryRequest;
 
 class CategoryController extends Controller
 {
-      protected $categoryService;
+    protected $categoryService;
 
     public function __construct(CategoryService $categoryService)
     {

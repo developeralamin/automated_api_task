@@ -7,7 +7,7 @@ use App\Models\Category;
 class CategoryService
 {
     /**
-     * Get all Category of a shop
+     * Get all Category 
      *
      * @return mixed
      */
