@@ -4,7 +4,7 @@ namespace App\Services;
 
 use App\Models\Product;
 use Illuminate\Http\Request;
-
+use Illuminate\Support\Facades\Cache;
 class ProductService
 {
     private mixed $category_id;
@@ -19,6 +19,13 @@ class ProductService
         $this->minPrice      = $request->get('min_price');
         $this->maxPrice      = $request->get('max_price');
     }
+
+    // public function allProducts(): mixed
+    // {
+    //     return Cache::remember('products_list', 60, function () {
+    //         return Product::latest()->paginate(100);
+    //     });
+    // }
 
     public function getAllProducts(): mixed
     {

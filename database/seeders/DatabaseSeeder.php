@@ -29,7 +29,7 @@ class DatabaseSeeder extends Seeder
         ]);
 
         //customer
-        User::factory()->count(10)->create();
+        User::factory()->count(5)->create();
 
        Category::factory(5)->create()->each(function ($category) {
             Product::factory(10)->create([
@@ -43,6 +43,6 @@ class DatabaseSeeder extends Seeder
             ]);
         });
         
-        Cart::factory(15)->create();
+        Cart::factory(5)->create();
     }
 }

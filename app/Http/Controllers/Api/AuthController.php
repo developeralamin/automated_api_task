@@ -26,7 +26,10 @@ class AuthController extends Controller
         $user = User::where('email', $request->email)->first();
 
         if (!$user) {
-            return $this->fail('Incorrect email address. Please use correct email');
+            return response()->json([
+            'status' => 'error',
+            'message' => 'Invalid credentials.',
+        ], 401);
         }
         if (Hash::check($request->password, $user->password)) {
             $token    = $user->createToken('authToken')->plainTextToken;
@@ -34,7 +37,11 @@ class AuthController extends Controller
                 'user'        => new ProfileResource($user),
                 'token'       => $token
             ];
-            return $this->success($response);
+            
+            return response()->json([
+                    'status' => 'success',
+                    'data' => $response,
+                ], 200);
         }
         return $this->fail('Invalid credentials.', 401);
     }
@@ -55,7 +62,7 @@ class AuthController extends Controller
         $user->password       = Hash::make($request->password);
         $user->save();
 
-        return $this->success('Thanks for Registration.');
+        return $this->success('Thanks for Registration.',201);
     }
 
     /**
