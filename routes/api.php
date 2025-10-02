@@ -5,7 +5,7 @@ use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\Api\AuthController;
 use App\Http\Controllers\Api\CategoryController;
 use App\Http\Controllers\Api\ProductController;
-
+use App\Http\Controllers\Api\CartController;
 
 Route::post('login', [AuthController::class, 'login']);
 Route::post('register', [AuthController::class, 'register']);
@@ -17,15 +17,15 @@ Route::middleware('auth:sanctum')->group(function () {
 
 // Admin routes (role-based)
 Route::middleware(['auth:sanctum', 'role:admin'])->prefix('admin')->group(function () {
-    Route::apiResource('categories', CategoryController::class)->except(['edit', 'show']);
-    Route::apiResource('products', ProductController::class)->except(['edit']);
+    Route::apiResource('categories', CategoryController::class)->except(['show']);
+    Route::apiResource('products', ProductController::class);
     // Route::apiResource('orders', OrderController::class);
 });
 
 // Customer routes (role-based)
 Route::middleware(['auth:sanctum', 'role:customer'])->prefix('customer')->group(function () {
-    return 200;
-    // Route::apiResource('cart', CartController::class);
+
+    Route::apiResource('cart', CartController::class)->except(['show']);
     // Route::post('orders', [CustomerOrderController::class, 'placeOrder']);
     // Route::get('orders', [CustomerOrderController::class, 'myOrders']);
 });
