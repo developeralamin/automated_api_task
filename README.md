@@ -104,14 +104,29 @@ php artisan key:generate
  php artisan migrate:fresh --seed
 ```
 
-- Step:7  Setup the smtp mailtrap for sending testing mail after Orderconfirm and Orderplace 
+Step 7: Setup the SMTP service (Mailtrap) for testing
+S1. Create Mailtrap Account
+Go to https://mailtrap.io
+Sign up (free plan is enough for testing).
+Inside Dashboard → create an Inbox (if not created automatically).
 
+2. Get SMTP Credentials
+Inside that inbox, click on SMTP Settings.
+Copy these values: HOST, PORT, USERNAME, PASSWORD.
+
+3. Update .env File
+4. Clear and Cache Config
+
+```bash
+php artisan config:clear
+php artisan cache:clear
+```
 ```bash
     MAIL_MAILER=smtp
     MAIL_HOST=smtp.mailtrap.io
     MAIL_PORT=587
-    MAIL_USERNAME=bdc92f522f2248
-    MAIL_PASSWORD=bf1df338da0c03
+    MAIL_USERNAME=your_actual_mailtrap_username
+    MAIL_PASSWORD=your_actual_mailtrap_password
     MAIL_ENCRYPTION=tls
     MAIL_FROM_ADDRESS="hello@example.com"
     MAIL_FROM_NAME="${APP_NAME}"
