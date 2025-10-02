@@ -37,7 +37,7 @@ To easily test all the backend functionalities, you can import the provided Post
 3.  **Import the Collection:**
     * In Postman, click **File -> Import** and select the downloaded `Automate.postman_collection.json` file.
 4.  **Set the Base URL:**
-    * The collection is configured to use an environment variable called `{{url}}`. Ensure your Postman environment's `url` variable is set to your local server address: `http://127.0.0.1:8000/api/v1`
+    * The collection is configured to use an environment variable called `{{url}}`. Ensure your Postman environment's `url` variable is set to your local server address: `http://127.0.0.1:8000/api`
 
 ### 🔑 Authentication Flow
 
