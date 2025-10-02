@@ -49,15 +49,14 @@ All authenticated endpoints require an **Authorization Header** with a **Bearer 
 
 ### 🔑 Default Login Credentials
   Admin:
-  Email: admin2@gmail.com
-  password: password
+  1. Email: admin2@gmail.com
+  2. password: password
 
-  User:
-   Email:  (Dynamically Generated -- Check the database (users table) for an entry with role = customer.)
-   password: password
+  Customer:
+   1. Email:  (Dynamically Generated -- Check the database (users table) for an entry with role = customer.)
+   2. password: password
 
-   check this sheets:
-   https://docs.google.com/spreadsheets/d/1HhcahbCgC4udC4s7zCv7ObVMt8CtZIvNZHXjQ-imOjA/edit?gid=1394640988#gid=1394640988
+  
 ---
 
 
