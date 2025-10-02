@@ -127,7 +127,7 @@ Step 9: Start the queue  and default queue connection is database .
 php artisan queue:listen
 ```
 
-Step 9: Default queue connection is database send mail with notification
+Step 10: Default queue connection is database send mail with notification
 ```bash
   QUEUE_CONNECTION=database
 ```
