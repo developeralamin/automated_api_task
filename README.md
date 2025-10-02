@@ -124,7 +124,7 @@ php artisan serve
 ```
 Step 9: Start the queue  and default queue connection is database .
 ```bash
-php artisan queue:work
+php artisan queue:listen
 ```
 
 Step 9: Default queue connection is database send mail with notification
