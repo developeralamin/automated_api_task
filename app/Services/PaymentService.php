@@ -2,10 +2,10 @@
 
 namespace App\Services;
 
+use App\Constants\GlobalConstant;
 use App\Models\Order;
 use App\Models\Payment;
 use Illuminate\Support\Facades\DB;
-
 class PaymentService
 {
     /**
@@ -23,7 +23,7 @@ class PaymentService
             $payment = Payment::create([
                 'order_id' => $order->id,
                 'amount'   => $amount,
-                'status'   => 'success', 
+                'status'   => GlobalConstant::SUCCESS, 
             ]);
             $order->save();
 

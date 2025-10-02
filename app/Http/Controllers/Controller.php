@@ -20,7 +20,7 @@ class Controller extends BaseController
      *
      * @return JsonResponse
      */
-    public function success($data, int $status_code): JsonResponse
+    public function success($data, int $status_code = 200): JsonResponse
     {
         return response()->json([
             'status' => 'success',

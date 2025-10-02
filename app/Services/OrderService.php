@@ -2,6 +2,7 @@
 
 namespace App\Services;
 
+use App\Constants\GlobalConstant;
 use App\Models\Order;
 use App\Models\Cart;
 use Illuminate\Support\Facades\DB;
@@ -23,7 +24,7 @@ class OrderService
             $order = Order::create([
                 'user_id' => $userId,
                 'total_amount' => $total,
-                'status' => 'pending',
+                'status' => GlobalConstant::PENDING,
             ]);
             if($order){
               $order->user->notify(new OrderPlacedNotification($order));

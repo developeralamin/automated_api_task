@@ -37,7 +37,6 @@ class AuthController extends Controller
                 'user'        => new ProfileResource($user),
                 'token'       => $token
             ];
-            
             return response()->json([
                     'status' => 'success',
                     'data' => $response,
@@ -84,10 +83,7 @@ class AuthController extends Controller
     {
         $request->user()->currentAccessToken()->delete();
 
-       return $this->success([
-            'status' => 'success',
-            'message' => 'Logged out successfully'
-        ]);
+       return $this->success('Logout Successfully');
     }
 
 }
