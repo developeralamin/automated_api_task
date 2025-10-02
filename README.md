@@ -47,7 +47,19 @@ All authenticated endpoints require an **Authorization Header** with a **Bearer 
 2.  The response token is automatically saved to the Postman environment variable `{{token}}`.
 3.  All subsequent requests will use `Bearer {{token}}` for authorization.
 
+### 🔑 Default Login Credentials
+  Admin:
+  Email: admin2@gmail.com
+  password: password
+
+  User:
+   Email:  (Dynamically Generated -- Check the database (users table) for an entry with role = customer.)
+   password: password
+
+   check this sheets:
+   https://docs.google.com/spreadsheets/d/1HhcahbCgC4udC4s7zCv7ObVMt8CtZIvNZHXjQ-imOjA/edit?gid=1394640988#gid=1394640988
 ---
+
 
 ## ⚙️ How to Set Up Locally
 
